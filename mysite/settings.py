@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+import django_on_heroku as django_heroku
 
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
@@ -119,3 +120,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+django_heroku.settings(locals())
